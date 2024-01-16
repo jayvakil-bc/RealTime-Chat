@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.title {
+  color: #d9e1e8;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+
+.description {
+  color: #d9e1e8;
+}
+
+.description h3 {
+  color: #627387;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.description ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.description li {
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to bottom, #1f2533, #161b26);
+  color: #d9e1e8;
+}
+
+
+.main {
+  border: 8px solid #202836;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(to right, #202836, #161b26);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding-right: 5px;
+  
+}
+
+.name {
+  display: flex;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 16px;
+  color: #a4b1c0;
+  background: linear-gradient(to right, #202836, #161b26);
+  border-bottom: 2px solid #1f2533;
+}
+
+.name > span {
+  color: #627387;
+}
+
+.name-input {
+  font-size: 18px;
+  font-weight: 700;
+  color: #a4b1c0;
+  flex-grow: 1;
+  border: none;
+  margin: 0px 12px;
+  outline: none;
+  background: linear-gradient(to right, #202836, #161b26);
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #161b26, #202836);
+  width: 400px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.message-left,
+.message-right {
+  list-style: none;
+  padding: 8px 12px;
+  margin: 12px;
+  max-width: 250px;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.message-left {
+  color:#161b26;
+  border-radius: 20px 20px 20px 0px;
+  align-self: flex-start;
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0);
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.message-right {
+  border-radius: 20px 20px 0px 20px;
+  align-self: flex-end;
+  background: linear-gradient(to right, #28313e, #202836);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #d9e1e8;
+}
+
+.message-left > p > span,
+.message-right > p > span {
+  display: block;
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 14px;
+  padding: 0px 16px 16px 16px;
+  color: #627387;
+  text-align: center;
+}
+
+.message-form {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.message-input {
+  color: #161b26;
+  flex-grow: 1;
+  height: 48px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  margin-top: 5px;
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0);
+  border-radius: 20px 20px 20px 20px;
+}
+
+.send-button {
+  height: 48px;
+  font-size: 16px;
+  border: none;
+  padding: 0px 15px;
+  outline: none;
+  margin-top: 5px;
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0);
+  border-radius: 25px 25px 25px 25px;
+  color: #202836;
+  cursor: pointer;
+}
+
+.v-divider {
+  height: 48px;
+  width: 2px;
+  background: linear-gradient(to right, #161b26, #202836);
+}
+
+.clients-total {
+  margin: 20px 0;
+  color: #627387;
+  font-size: 16px;
+}
+
+/* Hide scrollbar for Firefox */
+.message-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.message-container {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    margin-top: 20px;
+  }
+}
+
+/* Adjust styles for larger screens */
+@media screen and (min-width: 1155px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .description {
+    grid-column: 3 / span 1;
+  }
+  .main{
+    grid-column: 2 / span 1;
+  }
+}
